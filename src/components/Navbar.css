@@ -25,7 +25,6 @@
   content: "";
   display: block;
   width: 0%;
-  border-bottom: 2px solid var(--zm-teal);
   transition: width .1s ease-in;
 }
 
@@ -46,6 +45,9 @@
   #mainNav,
   #socialNav {
     display: block;
+  }
+  #mainNav li::after {
+    border-bottom: 2px solid var(--zm-teal);
   }
 }
 
