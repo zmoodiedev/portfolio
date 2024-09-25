@@ -1,0 +1,43 @@
+
+#projects {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 8rem;
+  position: relative;
+}
+
+#projects .scroll-wrapper {
+    height: 100vh;
+    height: 100dvh;
+    overflow-y: scroll;
+    scroll-snap-type: x inline mandatory;
+    scroll-behavior: smooth;
+  }
+  
+  .projects-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5em;
+  }
+
+  .project {
+    flex: 1 0 21%;
+    height: 250px;
+    position: relative;
+    cursor: pointer;
+    transition: all ease-in-out .2s;
+
+    &:hover {
+      transform: scale(1.1); 
+      z-index: 2;
+    }
+
+    & img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      object-position: left center;
+    }
+  }

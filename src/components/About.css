@@ -1,0 +1,15 @@
+
+#aboutme {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  padding: 8rem;
+  position: relative;
+}
+
+#aboutText {
+  flex: 2;
+  padding-right: 3rem;
+}
+

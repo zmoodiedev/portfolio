@@ -1,0 +1,16 @@
+main.scroll-wrapper {
+  height: 100vh;
+  height: 100dvh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
+  
+.scroll-section {
+  height: 100%;
+  scroll-snap-align: center;
+  background-color: var(--zm-black);
+  &:nth-child(even) {
+    background-color: var(--zm-black);
+  }
+}

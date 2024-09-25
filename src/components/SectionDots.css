@@ -1,0 +1,40 @@
+#sectionDots ul{
+    height: 100vh;
+    background-color: transparent;
+    position: fixed;
+    left: 0;
+    top: 0;
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    gap: 1.6em;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+  }
+  
+  
+  .section-dot a {
+    display: block;
+    width: 16px;
+    height: 16px;
+    font-size: 1em;
+    font-weight: 400;
+    border: 2px solid var(--zm-teal);
+    background-color: transparent;
+    border-radius: 50px;
+    transition: height .2s ease-in-out;
+  }
+  
+  .section-dot.active a {
+    background-color: var(--zm-teal);
+    height: 32px;
+  }
+
+  @media screen and (max-width: 767px) {
+  
+    #sectionDots {
+      display: none;
+    }
+  
+  }

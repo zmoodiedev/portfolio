@@ -1,0 +1,34 @@
+#knowledgeWrap {
+    flex: 1;
+    height: 80%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 1em;
+    grid-row-gap: 1em;
+  }
+  
+  .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 200px;
+    max-height: 200px;
+    padding: 1rem;
+  
+    & img {
+      width: 100%;
+    }
+  }
+  
+  .language-1 { grid-area: 2 / 1 / 3 / 2; }
+  .language-2 { grid-area: 3 / 1 / 4 / 2; }
+  .language-3 { grid-area: 4 / 1 / 5 / 2; }
+  .language-4 { grid-area: 1 / 2 / 2 / 3; }
+  .language-5 { grid-area: 2 / 2 / 3 / 3; }
+  .language-6 { grid-area: 3 / 2 / 4 / 3; }
+  .language-7 { grid-area: 4 / 2 / 5 / 3; }
+  .language-8 { grid-area: 5 / 2 / 6 / 3; }
+  .language-9 { grid-area: 2 / 3 / 3 / 4; }
+  .language-10 { grid-area: 3 / 3 / 4 / 4; }
+  .language-11 { grid-area: 4 / 3 / 5 / 4; }

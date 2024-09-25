@@ -1,0 +1,164 @@
+.nav-wrap {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+
+#mainNav ul,
+#socialNav ul {
+  display: inline-flex;
+  gap: 4rem;
+}
+
+#mainNav a {
+  font-size: .9rem;
+  font-weight: 300;
+}
+
+#mainNav a,
+#socialNav a {
+  display: flex;
+  padding: .9rem;
+}
+
+#mainNav li::after {
+  content: "";
+  display: block;
+  width: 0%;
+  border-bottom: 2px solid var(--zm-teal);
+  transition: width .1s ease-in;
+}
+
+#mainNav li.active::after,
+#socialNav li.active::after {
+  border-bottom-width: 100%;
+  width: 100%;
+}
+
+#socialNav ul li{
+  font-size: 1.5em;
+}
+
+@media screen and (min-width: 768px) {
+  #navBtn {
+    display: none;
+  }
+  #mainNav,
+  #socialNav {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 767px) {
+
+  #logo {
+    display: block;
+    z-index: 3;
+  }
+
+  /* ----- Burger Menu ----- */
+
+  #navBtn {
+    display: block;
+    
+    & label {
+      display:flex;
+      flex-direction:column;
+      width:40px;
+      cursor:pointer;
+      
+      & span{
+        background: var(--zm-teal);
+        border-radius:10px;
+        height:6px;
+        margin: 4px 0;
+        transition: .4s  cubic-bezier(0.68, -0.6, 0.32, 1.6);
+      
+        &:nth-of-type(1){
+          width:50%;  
+        }
+    
+        &:nth-of-type(2){
+          width:100%;
+        }
+
+        &:nth-of-type(3){
+          width:70%;
+        }
+      }
+    }
+
+    & input[type="checkbox"] {
+      display:none;
+      
+      &:checked ~ span:nth-of-type(1) {
+        transform-origin:center;
+        transform:rotatez(45deg) translate(8px, 0)
+      }
+    
+      &:checked ~ span:nth-of-type(2) {
+        transform-origin:top;
+        transform:rotatez(-45deg)
+      }
+
+      &:checked ~ span:nth-of-type(3) {
+        transform-origin:center;
+        width:50%;
+        transform: translate(20px,-8px) rotatez(45deg);
+      }
+    }
+  }
+
+  .nav-wrap {
+    height: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    left: 0;
+    padding: 0 2rem;
+    background-color: var(--zm-black);
+    transition: all .3s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+
+    & #mainNav,
+    #socialNav {
+      position: absolute;
+      left: -1000px;
+
+      & a {
+        color: #fff;
+        font-size: 2.5rem;
+
+        &.active {
+          color: var(--zm-black);
+        }
+      }
+    }
+
+    & #mainNav {
+      & ul {
+        flex-direction: column;
+        width: 100%;
+      }
+    }
+
+    & #socialNav {
+      bottom: 2.5rem;
+    }
+
+  }
+  
+
+  .nav-wrap.active {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: 100vh;
+    padding: 8rem 2rem 4rem 2rem;
+    
+    & #mainNav, #socialNav {
+      left: unset;
+    }
+  }
+
+}

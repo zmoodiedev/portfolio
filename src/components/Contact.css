@@ -1,0 +1,25 @@
+#contactme {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 8rem;
+  position: relative;
+  text-align: center;
+  & p {
+    margin-bottom: 3rem;
+  }
+}
+
+.contact-list {
+  display: flex;
+  gap: 2rem;
+
+  & .contact-method {
+    font-size: 2rem;
+    transition: color 0.2s ease;
+    &:hover {
+      color: var(--zm-teal);
+    }
+  }
+}
