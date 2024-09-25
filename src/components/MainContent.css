@@ -1,8 +1,6 @@
 main.scroll-wrapper {
   height: 100vh;
   height: 100dvh;
-  overflow-y: scroll;
-  scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
 }
   
@@ -10,7 +8,21 @@ main.scroll-wrapper {
   height: 100%;
   scroll-snap-align: center;
   background-color: var(--zm-black);
+  padding: 4rem;
+
   &:nth-child(even) {
     background-color: var(--zm-black);
+  }
+
+}
+
+@media screen and (min-width: 768px) {
+  main.scroll-wrapper {
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+  }
+
+  .scroll-section {
+    padding: 8rem;
   }
 }

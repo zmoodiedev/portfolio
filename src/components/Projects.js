@@ -14,6 +14,7 @@ const Projects = () => {
             <div className="projects-wrap">
                 {projectList.map((project) => (
                     <div
+                        key={project.id}
                         className={`project project-${project.id}`}
                         onClick={() => handleClick(project.url)}
                     >
