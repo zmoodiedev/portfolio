@@ -9,7 +9,7 @@
         content:"\f35d";
         font-family: "Font Awesome 6 Free";
         font-weight: 900;
-        font-size: 2rem;
+        font-size: clamp(1.5rem, 1vw, 2rem);
         position: absolute;
         bottom: 0;
         left: 0;
@@ -35,7 +35,7 @@
     }
 
     & .feature-img {
-        max-height: 275px;
+        height: 100%;
         width: 100%;
 
         & img {

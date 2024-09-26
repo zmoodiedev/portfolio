@@ -14,6 +14,12 @@ const projectList  = [
         img: BizDirectory,
         url: '#',
     },
+    {
+        id: 3,
+        name: "Tmbr",
+        img: Timbr,
+        url: '#',
+    },
     
 ]
 

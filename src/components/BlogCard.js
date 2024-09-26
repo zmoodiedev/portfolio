@@ -1,9 +1,9 @@
 import React from "react";
 import "./BlogCard.css";
 
-const BlogCard = ({id, img, title, date, tease}) => {
+const BlogCard = ({id, img, title, date, tease, onClick}) => {
     return (
-        <div className={`blog-card-${id}`}>
+        <div className={`blog-card-${id}`} onClick={onClick}>
             <div className="feature-img">
                 <img src={img} alt={title} />
             </div>
