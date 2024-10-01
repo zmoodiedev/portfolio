@@ -10,7 +10,7 @@ const Projects = () => {
 
     return (
         <>
-            <h2>Projects</h2>
+            <h2>Current Projects</h2>
             <div className="projects-wrap">
                 {projectList.map((project) => (
                     <div
@@ -18,6 +18,10 @@ const Projects = () => {
                         className={`project project-${project.id}`}
                         onClick={() => handleClick(project.url)}
                     >
+                        <div className="project-overlay">
+                            <h3 className="project-name">{project.name}</h3>
+                            <a className="btn project-btn">View</a>
+                        </div>
                         <img src={project.img} alt={project.name} />
                     </div>
                 ))}

@@ -22,7 +22,7 @@ const Navbar = ({ isActive, activeIndex, navItems, closeNav }) => {
                         key={item.id}
                         className={`nav-item ${activeIndex === index ? 'active' : ''}`}
                     >
-                        <a href={`#${item.name.toLowerCase().replace(/\s+/g, '')}`} onClick={handleNavItemClick}>
+                        <a href={`#${item.name.toLowerCase().replace(/\s+/g, '')}`} onClick={handleNavItemClick} className={`${item.name.toLowerCase().replace(/\s+/g, '')}`}>
                         {item.name}
                         </a>
                     </li>

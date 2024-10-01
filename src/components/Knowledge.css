@@ -30,3 +30,9 @@
   .language-7 { grid-area: 3 / 1 / 4 / 2; }
   .language-8 { grid-area: 3 / 2 / 4 / 3; }
   .language-9 { grid-area: 3 / 3 / 4 / 4; }
+
+  @media screen and (max-width: 991px) {
+    #knowledgeWrap {
+      margin-top: 2rem;
+    }
+  }

@@ -10,12 +10,11 @@
   flex: 1;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 992px) {
   
   #aboutme {
     display: flex;
     justify-content: center;
-    align-items: center;
     flex-direction: row;
     position: relative;
   }

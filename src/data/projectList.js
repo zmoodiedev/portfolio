@@ -5,7 +5,7 @@ import Neon from "../assets/images/neon_tn.jpg";
 const projectList  = [
     {
         id: 1,
-        name: "Tmbr",
+        name: "Timbr",
         img: Timbr,
         url: 'https://zmoodiedev.github.io/timbr/',
     },
