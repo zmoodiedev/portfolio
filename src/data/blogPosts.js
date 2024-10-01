@@ -8,13 +8,6 @@ const blogPosts = [
         date: "September 20, 2024",
         tease: 'Lorem ipsum dolor sit amet. Sed accusantium autem in reiciendis optio aut dolore tempore ut placeat.'
     },
-    {
-        id: 2,
-        img: Feature1,
-        title: 'Writing is HARD',
-        date: "September 25, 2024",
-        tease: 'Lorem ipsum dolor sit amet. Sed accusantium autem in reiciendis optio aut dolore tempore ut placeat.'
-    },
 ];
 
 export default blogPosts;
