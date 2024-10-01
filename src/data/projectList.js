@@ -1,12 +1,13 @@
 import BizDirectory from "../assets/images/biz-directory_tn.jpg";
 import Timbr from "../assets/images/timbr_tn.jpg";
+import Neon from "../assets/images/neon_tn.jpg";
 
 const projectList  = [
     {
         id: 1,
-        name: "Tmbr",
+        name: "Timbr",
         img: Timbr,
-        url: '#',
+        url: 'https://zmoodiedev.github.io/timbr/',
     },
     {
         id: 2,
@@ -16,9 +17,9 @@ const projectList  = [
     },
     {
         id: 3,
-        name: "Tmbr",
-        img: Timbr,
-        url: '#',
+        name: "Design Exploration",
+        img: Neon,
+        url: 'https://zmoodiedev.github.io/Odin-Landing-Page/',
     },
     
 ]
