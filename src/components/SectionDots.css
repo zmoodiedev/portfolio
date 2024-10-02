@@ -20,15 +20,40 @@
     height: 16px;
     font-size: 1em;
     font-weight: 400;
-    border: 2px solid var(--zm-teal);
+    border: 2px solid var(--zm-pink);
     background-color: transparent;
     border-radius: 50px;
-    transition: height .2s ease-in-out;
+    transition: all .2s ease-in-out;
+    position: relative;
   }
   
+  .section-dot a:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 0.45rem;
+    width: 100%;
+    height: 12px;
+    -webkit-box-shadow: inset 0px 0px 0.4em 0px var(--zm-pink), 0px 0px 0.4em 0px var(--zm-pink);
+    -moz-box-shadow: inset 0px 0px 0.4em 0px var(--zm-pink), 0px 0px 0.4em 0px var(--zm-pink);
+    box-shadow: inset 0px 0px 0.4em 0px var(--zm-pink), 0px 0px 0.4em 0px var(--zm-pink);
+    transition: all .2s ease-in-out;
+  }
+
+
   .section-dot.active a {
-    background-color: var(--zm-teal);
+    background-color: var(--zm-pink);
+    border: 2px solid var(--zm-pink);
     height: 32px;
+  }
+
+  .section-dot.active a:after {
+    height: 30px;
+    -webkit-box-shadow: inset 0px 0px 0.4em 0px var(--zm-pink), 0px 0px 0.4em 0px var(--zm-pink);
+    -moz-box-shadow: inset 0px 0px 0.4em 0px var(--zm-pink), 0px 0px 0.4em 0px var(--zm-pink);
+    box-shadow: inset 0px 0px 0.4em 0px var(--zm-pink), 0px 0px 0.4em 0px var(--zm-pink);
   }
 
   @media screen and (max-width: 991px) {

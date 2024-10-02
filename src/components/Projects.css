@@ -2,7 +2,6 @@
 #projects {
   display: flex;
   justify-content: center;
-  align-items: center;
   flex-direction: column;
   position: relative;
 }
@@ -18,7 +17,7 @@
   .projects-wrap {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+
     gap: 1.5em;
   }
 
@@ -67,5 +66,16 @@
 
     .project {
       flex: 1 0 21%;
+    }
+  }
+
+  @media screen and (max-width: 991px) {
+
+    #projects {
+      align-items: center;
+    }
+
+    .project {
+      margin: 0 auto;
     }
   }

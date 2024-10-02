@@ -47,7 +47,10 @@
     display: block;
   }
   #mainNav li::after {
-    border-bottom: 2px solid var(--zm-teal);
+    border-bottom: 2px solid hsl(167, 98%, 49%, 0.5);
+    -webkit-box-shadow: inset 0px 0px 0.4em 0px var(--zm-teal), 0px 0px 0.4em 0px var(--zm-teal);
+    -moz-box-shadow: inset 0px 0px 0.4em 0px var(--zm-teal), 0px 0px 0.4em 0px var(--zm-teal);
+    box-shadow: inset 0px 0px 0.4em 0px var(--zm-teal), 0px 0px 0.4em 0px var(--zm-teal);
   }
 }
 

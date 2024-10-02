@@ -4,6 +4,9 @@ import SectionDots from './components/SectionDots';
 import MainContent from './components/MainContent';
 import './_reset.css';
 import './App.css';
+import './assets/fonts/Thunder-Bold.woff';
+import './assets/fonts/Thunder-ExtraBold.woff';
+import './assets/fonts/Thunder-Black.woff';
 
 const App = () => {
 
