@@ -1,4 +1,4 @@
-a.btn {
+.btn {
   display: block;
   border: 1px solid var(--zm-teal);
   font-weight: 300;
@@ -6,7 +6,7 @@ a.btn {
   transition: all ease-in-out .2s;
 }
 
-a.btn:hover {
+.btn:hover {
   background-color: var(--zm-teal);
   color: var(--zm-black);
 }

@@ -20,7 +20,7 @@ const Projects = () => {
                     >
                         <div className="project-overlay">
                             <h3 className="project-name">{project.name}</h3>
-                            <a className="btn project-btn">View</a>
+                            <span className="btn project-btn">View</span>
                         </div>
                         <img src={project.img} alt={project.name} />
                     </div>

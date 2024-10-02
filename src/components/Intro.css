@@ -6,6 +6,17 @@
   flex-direction: column;
   padding: 8rem;
   position: relative;
+
+  h1 {
+    margin-bottom: .8rem;
+    font-weight: 500;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+    font-weight: 200;
+    letter-spacing: .1rem;
+  }
 }
   
 #intro::after {

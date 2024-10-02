@@ -10,7 +10,6 @@ const BlogCard = ({id, img, title, date, tease, onClick}) => {
             <div className="blog-details">
                 <h3 className="blog-title">{title}</h3>
                 <span className="blog-date">{date}</span>
-                <span className="blog-tease">{tease}</span>
             </div>
         </div>
     )
