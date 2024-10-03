@@ -5,11 +5,9 @@ import './BlogList.css';
 
 // Import individual blog post components
 import BlogPost1 from '../data/BlogPosts/BlogPost1';
-import BlogPost2 from '../data/BlogPosts/BlogPost2';
 
 const blogPosts = [
   { id: 1, component: BlogPost1 },
-  { id: 2, component: BlogPost2 },
 ];
 
 const BlogList = () => {

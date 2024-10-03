@@ -3,7 +3,8 @@
   --zm-orange: hsl(29, 95%, 64%);
   --zm-pink: hsl(334, 59%, 54%);
   --zm-grey: hsl(0, 0%, 60%);
-  --zm-black: hsl(240, 5%, 12%);
+  --zm-black: hsl(216, 28%, 7%);
+  --zm-light-black: hsl(216, 26%, 11%);
 }
 
 @font-face {
@@ -36,13 +37,13 @@ body {
   background-color: var(--zm-black);
   color: white;
   font-size: 16px;
-  font-family: 'Merriweather Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
   font-weight: 300;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Merriweather Sans', sans-serif;
-  font-weight: 700;
+  font-family: "Open Sans", sans-serif;
 }
 
 
@@ -51,17 +52,19 @@ h1 {
   font-size: 4rem;
   margin-bottom: 0;
   font-weight: 700;
+  line-height: normal;
 }
 
 h1 .highlight {
   color: var(--zm-teal);
   font-size: 10rem;
-  font-weight: 700;
+  font-weight: 900;
 }
 
 h2 {
   font-size: 2.4rem;
   margin-bottom: 3rem;
+  font-weight: 700;
 }
 
 h3 {

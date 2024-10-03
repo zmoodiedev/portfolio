@@ -3,19 +3,11 @@
   justify-content: center;
   flex-direction: column;
   position: relative;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
 #blogsWrap {
   display: inline-flex;
   gap: 2rem;
-}
-
-@media screen and (min-width: 992px) {
-
-}
-
-@media screen and (max-width: 991px) {
-  #blog {
-    align-items: center;
-  }
 }
