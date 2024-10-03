@@ -7,12 +7,14 @@ const projectList  = [
         name: "Portfolio",
         img: Portfolio,
         url: '#',
+        status: "In Progress",
     },
     {
         id: 2,
         name: "Timbr",
         img: Timbr,
         url: 'https://zmoodiedev.github.io/timbr/',
+        status: "In Progress",
     },
     
 ]

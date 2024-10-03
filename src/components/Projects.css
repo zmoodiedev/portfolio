@@ -51,6 +51,11 @@
         color: var(--zm-pink);
         font-size: 3rem;
         font-weight: 600;
+        margin-bottom: .2rem;
+      }
+
+      & .project-status {
+        font-weight: 300;
         margin-bottom: 1.5rem;
       }
 

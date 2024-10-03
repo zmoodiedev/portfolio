@@ -11,17 +11,15 @@ const blogPosts = [
 ];
 
 const BlogList = () => {
-  const [openPostId, setOpenPostId] = useState(null);
+  const [openPost, setOpenPost] = useState(null);
 
-  const handleCardClick = (postId) => {
-    setOpenPostId(postId);
+  const handleCardClick = (post) => {
+    setOpenPost(post);
   };
 
   const handleClosePost = () => {
-    setOpenPostId(null);
+    setOpenPost(null);
   };
-
-  const openPost = blogPosts.find(post => post.id === openPostId) || null;
 
   // Sort blog posts by date, most recent first
   const sortedBlogPosts = [...blogPosts].sort((a, b) => 
@@ -30,7 +28,7 @@ const BlogList = () => {
 
   return (
     <>
-       <div className="blog-list">
+      <div className="blog-list">
         {sortedBlogPosts.map(post => (
           <BlogCard 
             key={post.id} 
@@ -39,13 +37,13 @@ const BlogList = () => {
             image={post.component.image}
             excerpt={post.component.excerpt}
             date={post.component.date}
-            onClick={() => handleCardClick(post.id)} 
+            onClick={() => handleCardClick(post)} 
           />
         ))}
       </div>
       <FullBlogPost 
         post={openPost}
-        isOpen={openPostId !== null}
+        isOpen={openPost !== null}
         onClose={handleClosePost}
       />
     </>
