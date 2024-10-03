@@ -19,7 +19,7 @@ const Projects = () => {
                         onClick={() => handleClick(project.url)}
                     >
                         <div className="project-overlay">
-                            <h3 className="project-name">{project.name}</h3>
+                            <h4 className="project-name">{project.name}</h4>
                             <span className="btn project-btn">View</span>
                         </div>
                         <img src={project.img} alt={project.name} />

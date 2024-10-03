@@ -1,10 +1,10 @@
 :root {
   --zm-teal: hsl(167, 98%, 49%);
   --zm-orange: hsl(29, 95%, 64%);
-  --zm-pink: hsl(334, 59%, 54%);
+  --zm-pink: rgb(207, 68, 128);
   --zm-grey: hsl(0, 0%, 60%);
   --zm-black: hsl(216, 28%, 7%);
-  --zm-light-black: hsl(216, 26%, 11%);
+  --zm-light-black: rgb(21, 27, 35);
 }
 
 @font-face {
@@ -28,9 +28,14 @@
        url("./assets/fonts/Thunder-Black.woff") format("woff");
 }
 
+* {
+  margin:0;
+  padding:0;
+}
+
 html,
 body {
-  height: 100vh;
+  height: 100%;
 }
 
 body {
@@ -69,6 +74,12 @@ h2 {
 
 h3 {
   font-size: 1.6rem;
+}
+
+h4 {
+  font-size: 2.5rem;
+  font-family: 'Thunder', sans-serif;
+  font-weight: 900;
 }
 
 p {

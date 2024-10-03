@@ -1,5 +1,5 @@
 [class*="blog-card-"] {
-    min-width: 300px;
+    max-width: 300px;
     width: auto;
     height: auto;
     position: relative;

@@ -1,18 +1,18 @@
-import BizDirectory from "../assets/images/biz-directory_tn.jpg";
 import Timbr from "../assets/images/timbr_tn.jpg";
+import Portfolio from "../assets/images/portfolio_tn.jpg";
 
 const projectList  = [
     {
         id: 1,
-        name: "Timbr",
-        img: Timbr,
-        url: 'https://zmoodiedev.github.io/timbr/',
+        name: "Portfolio",
+        img: Portfolio,
+        url: '#',
     },
     {
         id: 2,
-        name: "Business Directory",
-        img: BizDirectory,
-        url: '#',
+        name: "Timbr",
+        img: Timbr,
+        url: 'https://zmoodiedev.github.io/timbr/',
     },
     
 ]

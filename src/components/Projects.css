@@ -19,7 +19,6 @@
   .projects-wrap {
     display: flex;
     flex-wrap: wrap;
-
     gap: 1.5em;
   }
 
@@ -29,38 +28,49 @@
     height: 400px;
     position: relative;
     cursor: pointer;
+    border-radius: 1rem;
 
     & .project-overlay {
       position: absolute;
-      top: 0;
+      bottom: 0;
       left: 0;
       width: 100%;
-      height: 100%;
-      background: linear-gradient(180deg, rgba(0, 0, 0, 0) 25%, rgba(22, 22, 22, 1) 65%);
+      height: 0;
+      background: rgba(21, 27, 35, 0.9);
       display: flex;
       flex-direction: column;
-      justify-content: flex-end;
-      align-items: center;
+      justify-content: center;
       text-align: center;
       font-weight: 600;
       padding: 2rem 1rem;
+      visibility: hidden;
+      transition: height .2s ease-in-out;
+      border-radius: 1rem;
 
-      & .project-name {
-        font-size: 1.2rem;
-        font-weight: 500;
+      & h4.project-name {
+        color: var(--zm-pink);
+        font-size: 3rem;
+        font-weight: 600;
         margin-bottom: 1.5rem;
       }
+
     }
 
     &:hover {
       z-index: 2;
+
+      & .project-overlay {
+        height: 100%;
+        visibility: visible;
+      }
     }
 
     & img {
       height: 100%;
       width: 100%;
       object-fit: cover;
-      object-position: center center;
+      object-position: left;
+      border-radius: 1rem;
     }
   }
 
@@ -68,16 +78,5 @@
 
     .project {
       flex: 1 0 21%;
-    }
-  }
-
-  @media screen and (max-width: 991px) {
-
-    #projects {
-      align-items: center;
-    }
-
-    .project {
-      margin: 0 auto;
     }
   }
