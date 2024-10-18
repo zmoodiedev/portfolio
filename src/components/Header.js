@@ -17,9 +17,6 @@ const Header = ({ activeIndex, navItems }) => {
 
     return (
         <header>
-            <div id="logo">
-                <a href="#home">Zach Moodie</a>
-            </div>
             <Navbar
                 isActive={isNavActive}
                 activeIndex={activeIndex}

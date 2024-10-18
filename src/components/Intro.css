@@ -24,7 +24,7 @@
 
     .bolt {
       font-size: 2rem;
-      color: var(--zm-teal);
+      color: var(--highlight-color);
       animation: border-flicker 1s linear infinite;
     }
   }
@@ -32,7 +32,7 @@
   a.view-portfolio:hover {
     font-size: 1.2rem;
     .bolt {
-      color: var(--zm-pink);
+      color: var(--secondary-color);
       animation: none;
     }
   }
@@ -55,14 +55,14 @@
 
 @media screen and (min-width:992px) {
   #intro {
-    background: linear-gradient(270deg, rgba(25,25,25,0) 0%, var(--zm-black) 80%);
+    background: linear-gradient(270deg, rgba(25,25,25,0) 0%, var(--background-color) 80%);
     padding: 8rem;
   }
 }
 
 @media screen and (max-width: 991px) {
   #intro {
-    background: linear-gradient(180deg, rgba(25,25,25,0) 0%, var(--zm-black) 95%);
+    background: linear-gradient(180deg, rgba(25,25,25,0) 0%, var(--background-color) 95%);
     text-align: center;
     padding: 2rem;
 

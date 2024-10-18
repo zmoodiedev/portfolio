@@ -1,10 +1,34 @@
 :root {
-  --zm-teal: hsl(167, 98%, 49%);
-  --zm-orange: hsl(29, 95%, 64%);
-  --zm-pink: rgb(207, 68, 128);
-  --zm-grey: hsl(0, 0%, 60%);
-  --zm-black: hsl(216, 28%, 7%);
-  --zm-light-black: rgb(21, 27, 35);
+
+  /* Dark theme colors */
+  --background-color: hsl(216, 28%, 7%);
+  --light-background: rgb(21, 27, 35);
+  --muted-color: hsl(0, 0%, 60%);
+  --text-color: white;
+  --highlight-color: hsl(167, 98%, 49%);
+  --secondary-color: rgb(207, 68, 128);
+  --tertiary-color: hsl(29, 95%, 64%);
+
+
+  /* Light theme colors */
+  --light-background-color: #f0f0f0;
+  --light-text-color: #333;
+  --light-highlight-color: hsl(167, 98%, 30%);
+  --light-secondary-color: rgb(180, 50, 100);
+  --light-tertiary-color: hsl(29, 95%, 40%);
+  --light-muted-color: hsl(0, 0%, 40%);
+  --light-light-background: #ffffff;
+}
+
+/* Light mode styles */
+[data-theme="light"] {
+  --background-color: var(--light-background-color);
+  --light-background: var(--light-light-background);
+  --muted-color: var(--light-muted-color);
+  --text-color: var(--light-text-color);
+  --highlight-color: var(--light-highlight-color);
+  --secondary-color: var(--light-secondary-color);
+  --tertiary-color: var(--light-tertiary-color);
 }
 
 @font-face {
@@ -39,8 +63,8 @@ body {
 }
 
 body {
-  background-color: var(--zm-black);
-  color: white;
+  background-color: var(--background-color);
+  color: var(--text-color);
   font-size: 16px;
   font-family: "Open Sans", sans-serif;
   font-optical-sizing: auto;
@@ -61,7 +85,7 @@ h1 {
 }
 
 h1 .highlight {
-  color: var(--zm-teal);
+  color: var(--highlight-color);
   font-size: 10rem;
   font-weight: 900;
 }

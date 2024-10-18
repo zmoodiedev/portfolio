@@ -1,4 +1,5 @@
 import React from "react";
+import ThemeToggle from './ThemeToggle';
 import './Navbar.css';
 
 const Navbar = ({ isActive, activeIndex, navItems, closeNav }) => {
@@ -34,6 +35,8 @@ const Navbar = ({ isActive, activeIndex, navItems, closeNav }) => {
                     <li className="nav-item"><a href="https://github.com/zmoodiedev" target="_blank" rel="noreferrer"><i className="fa-brands fa-github"></i></a></li>
                 </ul>
             </nav>
+            <ThemeToggle />
+            
         </div>
     )
 };

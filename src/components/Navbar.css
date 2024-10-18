@@ -12,7 +12,7 @@
 
 #mainNav a {
   font-size: .9rem;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 #mainNav a,
@@ -36,6 +36,13 @@
 
 #socialNav ul li{
   font-size: 1.5em;
+
+  a {
+    transition: color .2s ease-in-out;
+    &:hover {
+      color: var(--highlight-color);
+    }
+  }
 }
 
 @media screen and (min-width: 992px) {
@@ -46,11 +53,16 @@
   #socialNav {
     display: block;
   }
-  #mainNav li::after {
+  
+  [data-theme="dark"] #mainNav li::after {
     border-bottom: 2px solid hsl(167, 98%, 49%, 0.5);
-    -webkit-box-shadow: inset 0px 0px 0.4em 0px var(--zm-teal), 0px 0px 0.4em 0px var(--zm-teal);
-    -moz-box-shadow: inset 0px 0px 0.4em 0px var(--zm-teal), 0px 0px 0.4em 0px var(--zm-teal);
-    box-shadow: inset 0px 0px 0.4em 0px var(--zm-teal), 0px 0px 0.4em 0px var(--zm-teal);
+    -webkit-box-shadow: inset 0px 0px 0.4em 0px var(--highlight-color), 0px 0px 0.4em 0px var(--highlight-color);
+    -moz-box-shadow: inset 0px 0px 0.4em 0px var(--highlight-color), 0px 0px 0.4em 0px var(--highlight-color);
+    box-shadow: inset 0px 0px 0.4em 0px var(--highlight-color), 0px 0px 0.4em 0px var(--highlight-color);
+  }
+
+  [data-theme="light"] #mainNav li::after {
+    border-bottom: 2px solid var(--text-color);
   }
 }
 
@@ -73,7 +85,7 @@
       cursor:pointer;
       
       & span{
-        background: var(--zm-teal);
+        background: var(--highlight-color);
         border-radius:10px;
         height:6px;
         margin: 4px 0;
@@ -121,20 +133,21 @@
     width: 100%;
     left: 0;
     padding: 0 2rem;
-    background-color: var(--zm-black);
+    background-color: var(--background-color);
     transition: all .3s cubic-bezier(0.68, -0.6, 0.32, 1.6);
 
     & #mainNav,
-    #socialNav {
+    #socialNav,
+    .theme-toggle-wrapper {
       position: absolute;
       left: -1000px;
 
       & a {
-        color: #fff;
+        color: var(--text-color);
         font-size: clamp(2rem, 1vw, 2.5rem);
 
         &.active {
-          color: var(--zm-black);
+          color: var(--background-color);
         }
       }
     }
@@ -161,7 +174,7 @@
     height: 100vh;
     padding: 8rem 2rem 4rem 2rem;
     
-    & #mainNav, #socialNav {
+    & #mainNav, #socialNav, .theme-toggle-wrapper {
       left: unset;
     }
   }
