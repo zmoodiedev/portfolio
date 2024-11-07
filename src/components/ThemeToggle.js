@@ -6,8 +6,8 @@ const ThemeToggle = () => {
 
   useEffect(() => {
     const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    setIsDark(prefersDark);
-    document.documentElement.setAttribute('data-theme', prefersDark ? 'dark' : 'light');
+    setIsDark(prefersDark || true); // Set to dark if prefersDark is false
+    document.documentElement.setAttribute('data-theme', (prefersDark || true) ? 'dark' : 'light');
   }, []);
 
   const toggleTheme = () => {

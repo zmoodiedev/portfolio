@@ -19,7 +19,7 @@
   .projects-wrap {
     display: flex;
     flex-wrap: wrap;
-    gap: 1.5em;
+    gap: 2.5rem;
   }
 
   .project {
@@ -29,6 +29,7 @@
     position: relative;
     cursor: pointer;
     border-radius: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
 
     & .project-overlay {
       position: absolute;

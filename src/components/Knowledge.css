@@ -4,20 +4,55 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
-    grid-column-gap: 1em;
-    grid-row-gap: 1em;
+    grid-column-gap: 2em;
+    grid-row-gap: 2em;
   }
   
   .logo {
+    position: relative;
+    z-index: 1;
     display: flex;
     justify-content: center;
     align-items: center;
-    max-width: 200px;
-    max-height: 200px;
+    min-width: 50px;
+    width: 100%;
+    min-height: 50px;
+    height: 100%;
     padding: 1rem;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    &.html {
+      background-image: url('../assets/logos/html5_logo.svg');
+    }
+    &.css {
+      background-image: url('../assets/logos/css3_logo.svg');
+    }
+    &.js {
+      background-image: url('../assets/logos/js_logo.svg');
+    }
+    &.react {
+      background-image: url('../assets/logos/react_logo.svg');
+    }
+    &.git {
+      background-image: url('../assets/logos/git_logo.svg');
+    }
+    &.node {
+      background-image: url('../assets/logos/node_logo.svg');
+    }
+    &.python {
+      background-image: url('../assets/logos/python_logo.svg');
+    }
+    &.firebase {
+      background-image: url('../assets/logos/firebase_logo.svg');
+    }
+    &.github {
+      background-image: url('../assets/logos/github_logo.svg');
+    }
   
     & img {
-      width: 100%;
+      visibility: hidden;
     }
   }
   
@@ -30,6 +65,13 @@
   .language-7 { grid-area: 3 / 1 / 4 / 2; }
   .language-8 { grid-area: 3 / 2 / 4 / 3; }
   .language-9 { grid-area: 3 / 3 / 4 / 4; }
+
+
+  [data-theme="light"] {
+    & .github {
+      background-image: url('../assets/logos/github-black_logo.svg');
+    }
+  }
 
   @media screen and (max-width: 991px) {
     #knowledgeWrap {

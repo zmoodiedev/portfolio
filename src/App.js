@@ -4,64 +4,55 @@ import SectionDots from './components/SectionDots';
 import MainContent from './components/MainContent';
 import './_reset.css';
 import './App.css';
-import './assets/fonts/Thunder-Bold.woff';
-import './assets/fonts/Thunder-ExtraBold.woff';
-import './assets/fonts/Thunder-Black.woff';
 
 const App = () => {
+    const [activeIndex, setActiveIndex] = useState(null);
+    const sectionRefs = useRef([]);
+    
 
-  const [activeIndex, setActiveIndex] = useState(null);
-  const sectionRefs = useRef([]);
-
-  const handleSectionInView = (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        const index = sectionRefs.current.indexOf(entry.target);
-        setActiveIndex(index);
-      }
-    });
-  };
-
-  useEffect(() => {
-
-    const currentSections = sectionRefs.current;
-
-    const observer = new IntersectionObserver(handleSectionInView, {
-      root: null,
-      rootMargin: '0px',
-      threshold: 0.6,
-    });
-
-    currentSections.forEach((section) => {
-      if (section) observer.observe(section);
-    });
-
-    return () => {
-      currentSections.forEach((section) => {
-        if (section) observer.unobserve(section);
-      });
+    const handleSectionInView = (entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                const index = sectionRefs.current.indexOf(entry.target);
+                setActiveIndex(index);
+            }
+        });
     };
-  }, []);
 
-  const navItems = [
-    { id: 1, name: 'Intro', path: 'intro' },
-    { id: 2, name: 'About Me', path: 'about' },
-    { id: 3, name: 'Blog', path: 'blog' },
-    { id: 4, name: 'Projects', path: 'projects' },
-    { id: 5, name: 'Contact Me', path: 'contact' },
-];
+    useEffect(() => {
+        const currentSections = sectionRefs.current;
+        const observer = new IntersectionObserver(handleSectionInView, {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.6,
+        });
 
-  return (
-    <div className="main-container">
-      
-      <Header activeIndex={activeIndex} navItems={navItems} />
+        currentSections.forEach((section) => {
+            if (section) observer.observe(section);
+        });
 
-      <SectionDots activeIndex={activeIndex} navItems={navItems} />
+        return () => {
+            currentSections.forEach((section) => {
+                if (section) observer.unobserve(section);
+            });
+        };
+    }, []);
 
-      <MainContent sectionRefs={sectionRefs} />
+    const navItems = [
+        { id: 1, name: 'Intro', path: 'intro' },
+        { id: 2, name: 'About Me', path: 'about' },
+        { id: 3, name: 'Blog', path: 'blog' },
+        { id: 4, name: 'Projects', path: 'projects' },
+        { id: 5, name: 'Contact Me', path: 'contact' },
+    ];
 
-    </div>
-  );
-}
+    return (
+        <div className="main-container">
+            <Header activeIndex={activeIndex} navItems={navItems} />
+            <SectionDots activeIndex={activeIndex} navItems={navItems} />
+            <MainContent sectionRefs={sectionRefs} />
+        </div>
+    );
+};
 
 export default App;

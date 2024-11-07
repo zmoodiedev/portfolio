@@ -48,14 +48,14 @@
   background-image: url('../assets/images/cyber_space.png');
   background-position: center;
   background-size: cover;
-  opacity: .7;
+  opacity: 1;
   z-index: -1;
   background-attachment: fixed;
 }
 
 @media screen and (min-width:992px) {
   #intro {
-    background: linear-gradient(270deg, rgba(25,25,25,0) 0%, var(--background-color) 80%);
+    background: linear-gradient(255deg, rgba(25,25,25,0) 50%, var(--background-color) 70%);
     padding: 8rem;
   }
 }

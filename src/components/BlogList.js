@@ -5,9 +5,11 @@ import './BlogList.css';
 
 // Import individual blog post components
 import BlogPost1 from '../data/BlogPosts/BlogPost1';
+import ImposterSyndrome from '../data/BlogPosts/ImposterSyndrome';
 
 const blogPosts = [
   { id: 1, component: BlogPost1 },
+  { id: 2, component: ImposterSyndrome },
 ];
 
 const BlogList = () => {

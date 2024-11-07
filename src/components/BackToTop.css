@@ -1,0 +1,14 @@
+#backToTop {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 2rem;
+    right: 3rem;
+    padding: 10px;
+    background-color: var(--secondary-color);
+    color: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 100;
+}
