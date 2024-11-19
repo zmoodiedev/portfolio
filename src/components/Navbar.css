@@ -11,6 +11,7 @@
 }
 
 #mainNav a {
+  transition: color .2s ease-in-out;
   font-size: .9rem;
   font-weight: 400;
 }
@@ -69,8 +70,19 @@
   }
 
   [data-theme="light"] {
+
     & #mainNav li::after {
       border-bottom: 2px solid var(--text-color); 
+    }
+
+    
+    & #mainNav li.intro.active::after {
+      border-bottom: 2px solid #fff;
+    }
+
+    & #mainNav:has(li.nav-item.intro.active) a,
+    #mainNav:has(li.nav-item.intro.active) ~ #socialNav a {
+      color: #fff;
     }
   }
 
@@ -188,8 +200,10 @@
 
 
 /* New styles for when not in intro section */
-[data-theme="light"] #mainNav a {
-  color: var(--text-color); /* Default color */
+[data-theme="light"] {
+  & #mainNav a {
+    color: var(--text-color); /* Default color */
+  }
 }
 
 .not-in-intro [data-theme="light"] #mainNav a {
