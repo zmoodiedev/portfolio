@@ -52,8 +52,8 @@
   }
 
 
-  [data-theme="dark"] .section-dot a:after,
-  [data-theme="dark"] .section-dot.active a:after {
+  .section-dot a:after,
+  .section-dot.active a:after {
     -webkit-box-shadow: inset 0px 0px 0.4em 0px var(--secondary-color), 0px 0px 0.4em 0px var(--secondary-color);
     -moz-box-shadow: inset 0px 0px 0.4em 0px var(--secondary-color), 0px 0px 0.4em 0px var(--secondary-color);
     box-shadow: inset 0px 0px 0.4em 0px var(--secondary-color), 0px 0px 0.4em 0px var(--secondary-color);

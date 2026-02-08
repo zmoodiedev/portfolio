@@ -60,30 +60,11 @@
     display: block;
   }
   
-  [data-theme="dark"] {
-    & #mainNav li::after {
-      border-bottom: 2px solid hsl(167, 98%, 49%, 0.5);
-      -webkit-box-shadow: inset 0px 0px 0.4em 0px var(--highlight-color), 0px 0px 0.4em 0px var(--highlight-color);
-      -moz-box-shadow: inset 0px 0px 0.4em 0px var(--highlight-color), 0px 0px 0.4em 0px var(--highlight-color);
-      box-shadow: inset 0px 0px 0.4em 0px var(--highlight-color), 0px 0px 0.4em 0px var(--highlight-color);
-    }
-  }
-
-  [data-theme="light"] {
-
-    & #mainNav li::after {
-      border-bottom: 2px solid var(--text-color); 
-    }
-
-    
-    & #mainNav li.intro.active::after {
-      border-bottom: 2px solid #fff;
-    }
-
-    & #mainNav:has(li.nav-item.intro.active) a,
-    #mainNav:has(li.nav-item.intro.active) ~ #socialNav a {
-      color: #fff;
-    }
+  #mainNav li::after {
+    border-bottom: 2px solid hsl(167, 98%, 49%, 0.5);
+    -webkit-box-shadow: inset 0px 0px 0.4em 0px var(--highlight-color), 0px 0px 0.4em 0px var(--highlight-color);
+    -moz-box-shadow: inset 0px 0px 0.4em 0px var(--highlight-color), 0px 0px 0.4em 0px var(--highlight-color);
+    box-shadow: inset 0px 0px 0.4em 0px var(--highlight-color), 0px 0px 0.4em 0px var(--highlight-color);
   }
 
 }
@@ -159,8 +140,7 @@
     transition: all .3s cubic-bezier(0.68, -0.6, 0.32, 1.6);
 
     & #mainNav,
-    #socialNav,
-    .theme-toggle-wrapper {
+    #socialNav {
       position: absolute;
       left: -1000px;
 
@@ -191,22 +171,11 @@
     height: 100vh;
     padding: 8rem 2rem 4rem 2rem;
     
-    & #mainNav, #socialNav, .theme-toggle-wrapper {
+    & #mainNav, #socialNav {
       left: unset;
     }
   }
 
 }
 
-
-/* New styles for when not in intro section */
-[data-theme="light"] {
-  & #mainNav a {
-    color: var(--text-color); /* Default color */
-  }
-}
-
-.not-in-intro [data-theme="light"] #mainNav a {
-  color: var(--highlight-color); /* Color when not in intro */
-}
 

@@ -1,28 +1,37 @@
-
 #aboutme {
   display: flex;
   align-items: center;
-  flex-direction: column;
-  position: relative;
-  max-width: 1440px;
-  margin: 0 auto;
+  justify-content: center;
 }
 
 #aboutText {
-  flex: 1;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
 }
 
-@media screen and (min-width: 992px) {
-  
-  #aboutme {
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    position: relative;
-  }
+#aboutText h2 {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 2rem;
+}
 
-  #aboutText {
-    flex: 2;
-    padding-right: 3rem;
-  }
+#aboutText h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 2px;
+  background: var(--highlight-color);
+  margin: 0.5rem auto 0;
+}
+
+#aboutText .lead {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+#aboutText p {
+  line-height: 1.8;
 }

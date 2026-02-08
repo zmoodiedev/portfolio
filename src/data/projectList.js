@@ -1,24 +1,23 @@
-import Timbr from "../assets/images/timbr_tn.jpg";
-import RecipeBook from "../assets/images/recipe-book_tn.jpg";
+import Piggly from "../assets/images/piggly_tn.jpg";
+import Syft from "../assets/images/syft_tn.jpg";
 
-const projectList  = [
+const projectList = [
     {
         id: 1,
-        name: "Recipe Book",
-        img: RecipeBook,
-        url: 'https://github.com/zmoodiedev/recipe-book',
-        status: "In Progress",
-        description: "Save and access your favorite recipes.",
+        name: "Piggly",
+        img: Piggly,
+        url: 'https://piggly.zachmoodie.com',
+        status: "Featured",
+        description: "A full-stack budgeting application designed to help individuals and households track finances, manage debt, and visualize spending patterns.",
     },
     {
         id: 2,
-        name: "Timbr",
-        img: Timbr,
-        url: 'https://github.com/zmoodiedev/timbr',
-        status: "In Progress",
-        description: "Search, book, and review campgrounds throughout North America.",
+        name: "Syft",
+        img: Syft,
+        url: 'https://syft.cooking',
+        status: "Featured",
+        description: "A social recipe-sharing platform where users can save, share, and discover recipes with friends.",
     },
-    
 ]
 
 export default projectList;

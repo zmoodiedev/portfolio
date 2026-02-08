@@ -3,7 +3,6 @@
 import React from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
-import ThemeToggle from './ThemeToggle';
 import './Navbar.css';
 
 const Navbar = ({ isActive, activeIndex, navItems, closeNav }) => {
@@ -39,8 +38,6 @@ const Navbar = ({ isActive, activeIndex, navItems, closeNav }) => {
                     <li className="nav-item"><a href="https://github.com/zmoodiedev" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faGithub} /></a></li>
                 </ul>
             </nav>
-            <ThemeToggle />
-            
         </div>
     )
 };

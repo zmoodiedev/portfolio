@@ -88,7 +88,6 @@ meter {
 
 :root {
 
-  /* Dark theme colors */
   --background-color: hsl(216, 28%, 7%);
   --light-background: rgb(21, 27, 35);
   --muted-color: hsl(0, 0%, 60%);
@@ -96,27 +95,6 @@ meter {
   --highlight-color: hsl(167, 98%, 49%);
   --secondary-color: rgb(207, 68, 128);
   --tertiary-color: hsl(29, 95%, 64%);
-
-
-  /* Light theme colors */
-  --light-background-color: #f0f0f0;
-  --light-text-color: #333;
-  --light-highlight-color: hsl(167, 98%, 30%);
-  --light-secondary-color: rgb(180, 50, 100);
-  --light-tertiary-color: hsl(29, 95%, 40%);
-  --light-muted-color: hsl(0, 0%, 40%);
-  --light-light-background: #ffffff;
-}
-
-/* Light mode styles */
-[data-theme="light"] {
-  --background-color: var(--light-background-color);
-  --light-background: var(--light-light-background);
-  --muted-color: var(--light-muted-color);
-  --text-color: var(--light-text-color);
-  --highlight-color: var(--light-highlight-color);
-  --secondary-color: var(--light-secondary-color);
-  --tertiary-color: var(--light-tertiary-color);
 }
 
 * {
