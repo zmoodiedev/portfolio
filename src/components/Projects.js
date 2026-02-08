@@ -1,4 +1,7 @@
+"use client";
+
 import React from 'react';
+import Image from 'next/image';
 import projectList from '../data/projectList';
 import './Projects.css';
 
@@ -23,7 +26,7 @@ const Projects = () => {
                             <span className="project-description">{project.description}</span>
                             <span className="btn project-btn">View</span>
                         </div>
-                        <img src={project.img} alt={project.name} />
+                        <Image src={project.img} alt={project.name} />
                     </div>
                 ))}
             </div>

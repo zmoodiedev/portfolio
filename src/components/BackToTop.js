@@ -1,3 +1,7 @@
+"use client";
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronUp } from '@fortawesome/free-solid-svg-icons';
 import './BackToTop.css';
 
 const BackToTop = ({ introRef }) => {
@@ -12,7 +16,7 @@ const BackToTop = ({ introRef }) => {
 
     return (
         <button id="backToTop" onClick={scrollToIntro}>
-            <i className="fa-solid fa-chevron-up"></i>
+            <FontAwesomeIcon icon={faChevronUp} />
         </button>
     );
 };

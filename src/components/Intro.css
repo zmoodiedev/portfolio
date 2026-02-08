@@ -23,7 +23,8 @@
     transition: all .2s ease-in-out;
 
     .bolt {
-      font-size: 2rem;
+      width: 2rem;
+      height: 2rem;
       color: var(--highlight-color);
       animation: border-flicker 1s linear infinite;
     }

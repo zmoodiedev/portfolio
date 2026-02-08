@@ -1,4 +1,8 @@
+"use client";
+
 import React from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import ThemeToggle from './ThemeToggle';
 import './Navbar.css';
 
@@ -21,9 +25,9 @@ const Navbar = ({ isActive, activeIndex, navItems, closeNav }) => {
                     {navItems.map((item, index) => (
                     <li
                         key={item.id}
-                        className={`nav-item ${item.name.toLowerCase().replace(/\s+/g, '')} ${activeIndex === index ? 'active' : ''}`}
+                        className={`nav-item ${item.path} ${activeIndex === index ? 'active' : ''}`}
                     >
-                        <a href={`#${item.name.toLowerCase().replace(/\s+/g, '')}`} onClick={handleNavItemClick}>
+                        <a href={`#${item.path}`} onClick={handleNavItemClick}>
                         {item.name}
                         </a>
                     </li>
@@ -32,7 +36,7 @@ const Navbar = ({ isActive, activeIndex, navItems, closeNav }) => {
             </nav>
             <nav id="socialNav">
                 <ul>
-                    <li className="nav-item"><a href="https://github.com/zmoodiedev" target="_blank" rel="noreferrer"><i className="fa-brands fa-github"></i></a></li>
+                    <li className="nav-item"><a href="https://github.com/zmoodiedev" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faGithub} /></a></li>
                 </ul>
             </nav>
             <ThemeToggle />

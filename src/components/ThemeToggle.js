@@ -1,4 +1,8 @@
+"use client";
+
 import React, { useEffect, useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faMoon, faSun } from '@fortawesome/free-solid-svg-icons';
 import './ThemeToggle.css';
 
 const ThemeToggle = () => {
@@ -6,8 +10,8 @@ const ThemeToggle = () => {
 
   useEffect(() => {
     const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    setIsDark(prefersDark || true); // Set to dark if prefersDark is false
-    document.documentElement.setAttribute('data-theme', (prefersDark || true) ? 'dark' : 'light');
+    setIsDark(prefersDark);
+    document.documentElement.setAttribute('data-theme', prefersDark ? 'dark' : 'light');
   }, []);
 
   const toggleTheme = () => {
@@ -25,8 +29,8 @@ const ThemeToggle = () => {
           onChange={toggleTheme}
         />
         <div className="slider round">
-          <span className="icon dark-mode"><i className="fa-solid fa-moon"></i></span>
-          <span className="icon light-mode"><i className="fa-solid fa-sun"></i></span>
+          <span className="icon dark-mode"><FontAwesomeIcon icon={faMoon} /></span>
+          <span className="icon light-mode"><FontAwesomeIcon icon={faSun} /></span>
         </div>
       </label>
     </div>

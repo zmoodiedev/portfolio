@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import './SectionDots.css';
 
@@ -13,7 +15,7 @@ const SectionDots = ({ activeIndex, navItems }) => {
                     className={`section-dot ${activeIndex === index ? 'active' : ''}`}
                 >
                     <a
-                    href={`#${item.name.toLowerCase().replace(/\s+/g, '')}`}
+                    href={`#${item.path}`}
                     aria-label={item.name}></a>
                 </li>
                 ))}
