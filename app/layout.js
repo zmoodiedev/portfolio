@@ -32,18 +32,18 @@ const thunder = localFont({
 
 export const metadata = {
   metadataBase: new URL("https://www.zachmoodie.com"),
-  title: "Zach Moodie | Web Designer/Developer",
+  title: "Zach Moodie | Full-Stack Web Developer",
   description:
-    "The personal and professional portfolio of Web Designer & Developer Zach Moodie.",
+    "The personal and professional portfolio of Full-Stack Web Developer Zach Moodie.",
   openGraph: {
     type: "website",
     siteName: "Zach Moodie",
     locale: "en_US",
     url: "https://www.zachmoodie.com",
     images: ["/zmoodie256.jpg"],
-    title: "Zach Moodie | Web Designer/Developer",
+    title: "Zach Moodie | Full-Stack Web Developer",
     description:
-      "The personal and professional portfolio of Web Designer & Developer Zach Moodie.",
+      "The personal and professional portfolio of Full-Stack Web Developer Zach Moodie.",
   },
   icons: {
     icon: [
