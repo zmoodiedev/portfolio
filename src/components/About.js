@@ -7,8 +7,8 @@ const About = () => {
     return (
         <div id="aboutText">
             <h2>About Me</h2>
-            <p className="lead">I'm a full-stack web developer with over 14 years of design and development experience. My passion is creating dynamic web applications that make a difference.</p>
-            <p>Whether it's exploring the latest frameworks or discovering innovative solutions, I'm always on the lookout for ways to grow and improve. I love diving into new technologies and constantly learning new things to keep my skills sharp.</p>
+            <p className="lead">I'm a full-stack web developer with over 9 years of professional experience building customer-facing websites and internal tools. I currently work as a Full-Stack Multimedia Designer, where I bridge the gap between design and development teams—translating UI/UX concepts into working code while collaborating with engineers on architecture decisions.</p>
+            <p>Outside of work, I build modern web applications using React, Next.js, and TypeScript. I'm a lifelong gamer who's always been drawn to interactive experiences, which is what got me into web development in the first place. When I run into a problem that existing tools don't solve well, I'd rather build my own solution than pay for someone else's—it's how I stay sharp and work with the tech I'm most excited about.</p>
         </div>
     )
 };

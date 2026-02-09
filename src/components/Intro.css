@@ -104,8 +104,8 @@
 }
 
 #introText a.view-portfolio .bolt {
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 2rem;
+  height: 2rem;
   color: var(--highlight-color);
   animation: border-flicker 1s linear infinite;
 }

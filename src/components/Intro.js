@@ -4,8 +4,8 @@ import React from 'react';
 import './Intro.css';
 
 const BoltIcon = () => (
-    <svg className="bolt" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 -960 960 960" fill="currentColor">
-        <path d="M422-232 582-474H462l36-254-160 242h120l-36 254Z"/>
+    <svg className="bolt" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M9 15H5.9q-.6 0-.888-.537t.063-1.038l7.475-10.75q.25-.35.65-.487t.825.012t.625.525t.15.8L14 10h3.875q.65 0 .913.575t-.163 1.075L10.4 21.5q-.275.325-.675.425t-.775-.075t-.587-.537t-.163-.788z"/>
     </svg>
 );
 

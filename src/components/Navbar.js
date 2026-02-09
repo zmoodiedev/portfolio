@@ -2,7 +2,7 @@
 
 import React from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import './Navbar.css';
 
 const Navbar = ({ isActive, activeIndex, navItems, closeNav }) => {
@@ -36,6 +36,7 @@ const Navbar = ({ isActive, activeIndex, navItems, closeNav }) => {
             <nav id="socialNav">
                 <ul>
                     <li className="nav-item"><a href="https://github.com/zmoodiedev" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faGithub} /></a></li>
+                    <li className="nav-item"><a href="https://linkedin.com/in/zachmoodie" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faLinkedin} /></a></li>
                 </ul>
             </nav>
         </div>
