@@ -12,9 +12,13 @@ const BoltIcon = () => (
 const Intro = () => {
     return (
         <>
+            <div className="intro-scanlines" />
+            <div className="intro-gradient" />
+            <div className="intro-corner intro-corner--tr" />
+            <div className="intro-corner intro-corner--bl" />
             <div id="introText">
-                <h1>Hi, I'm<br/><span className="highlight">Zach</span></h1>
-                <h3>A Web Designer/Developer<br/>From Canada</h3>
+                <h1>Hey, I'm<br/><span className="highlight">Zach</span></h1>
+                <h3>A Full-Stack Web Developer<br/>From Canada</h3>
                 <a href="#projects" className="view-portfolio"><BoltIcon /> Check Out My Work</a>
             </div>
         </>

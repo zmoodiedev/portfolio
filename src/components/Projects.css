@@ -99,35 +99,27 @@
   transition: opacity 0.3s ease;
 }
 
-.project-corner--tl {
-  top: 20px;
-  left: 0;
+.project-corner--tr {
+  top: 16px;
+  right: 16px;
+  border-top: 2px solid currentColor;
+  border-right: 2px solid currentColor;
 }
 
-.project-corner--br {
-  bottom: 20px;
-  right: 0;
+.project-corner--bl {
+  bottom: 16px;
+  left: 16px;
+  border-bottom: 2px solid currentColor;
+  border-left: 2px solid currentColor;
 }
 
 /* Per-card corner colors */
-.project-1 .project-corner--tl {
-  border-top: 2px solid var(--secondary-color);
-  border-left: 2px solid var(--secondary-color);
+.project-1 .project-corner {
+  color: var(--secondary-color);
 }
 
-.project-1 .project-corner--br {
-  border-bottom: 2px solid var(--secondary-color);
-  border-right: 2px solid var(--secondary-color);
-}
-
-.project-2 .project-corner--tl {
-  border-top: 2px solid var(--highlight-color);
-  border-left: 2px solid var(--highlight-color);
-}
-
-.project-2 .project-corner--br {
-  border-bottom: 2px solid var(--highlight-color);
-  border-right: 2px solid var(--highlight-color);
+.project-2 .project-corner {
+  color: var(--highlight-color);
 }
 
 /* Corner flicker on hover */
@@ -317,11 +309,11 @@
     font-size: 2.2rem;
   }
 
-  .project-corner--tl {
-    top: 16px;
+  .project-corner--tr {
+    right: 16px;
   }
 
-  .project-corner--br {
-    bottom: 16px;
+  .project-corner--bl {
+    left: 16px;
   }
 }

@@ -1,44 +1,16 @@
 #intro {
   display: flex;
-  justify-content: center;
-  flex-direction: column;
+  align-items: center;
   position: relative;
-  h1 {
-    font-weight: 600;
-    text-transform: uppercase;
-  }
-
-  h3 {
-    font-size: 1.5rem;
-    font-weight: 200;
-    letter-spacing: .15rem;
-    margin-bottom: 2rem;
-  }
-
-  a.view-portfolio {
-    display: flex;
-    align-items: center;
-    width: max-content;
-    gap: .8rem;
-    transition: all .2s ease-in-out;
-
-    .bolt {
-      width: 2rem;
-      height: 2rem;
-      color: var(--highlight-color);
-      animation: border-flicker 1s linear infinite;
-    }
-  }
-
-  a.view-portfolio:hover {
-    font-size: 1.2rem;
-    .bolt {
-      color: var(--secondary-color);
-      animation: none;
-    }
-  }
+  overflow: hidden;
+  clip-path: polygon(20px 0, 100% 0, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%, 0 20px);
+  box-shadow:
+    0 0 8px rgba(0, 245, 196, 0.4),
+    0 0 20px rgba(0, 245, 196, 0.15),
+    inset 0 0 8px rgba(0, 245, 196, 0.08);
 }
-  
+
+/* Background image */
 #intro::after {
   content: "";
   width: 100%;
@@ -54,21 +26,141 @@
   background-attachment: fixed;
 }
 
-@media screen and (min-width:992px) {
+/* Section-level scanlines */
+.intro-scanlines {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 0.03) 0px,
+    rgba(255, 255, 255, 0.03) 1px,
+    transparent 1px,
+    transparent 3px
+  );
+}
+
+/* Section-level corner brackets */
+.intro-corner {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  pointer-events: none;
+  z-index: 2;
+  opacity: 0.7;
+  animation: border-flicker 3s linear infinite;
+}
+
+.intro-corner--tr {
+  top: 16px;
+  right: 16px;
+  border-top: 2px solid var(--highlight-color);
+  border-right: 2px solid var(--highlight-color);
+}
+
+.intro-corner--bl {
+  bottom: 16px;
+  left: 16px;
+  border-bottom: 2px solid var(--highlight-color);
+  border-left: 2px solid var(--highlight-color);
+}
+
+/* Gradient overlay — dark on text side, transparent on image side */
+.intro-gradient {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* ====================
+    TEXT STYLES
+======================= */
+
+#introText {
+  position: relative;
+  z-index: 3;
+}
+
+#introText h1 {
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+#introText h3 {
+  font-size: 1.5rem;
+  font-weight: 200;
+  letter-spacing: .15rem;
+  margin-bottom: 2rem;
+}
+
+#introText a.view-portfolio {
+  display: flex;
+  align-items: center;
+  width: max-content;
+  gap: .8rem;
+  transition: all .2s ease-in-out;
+}
+
+#introText a.view-portfolio .bolt {
+  width: 2.5rem;
+  height: 2.5rem;
+  color: var(--highlight-color);
+  animation: border-flicker 1s linear infinite;
+}
+
+#introText a.view-portfolio:hover {
+  font-size: 1.2rem;
+}
+
+#introText a.view-portfolio:hover .bolt {
+  color: var(--secondary-color);
+  animation: none;
+}
+
+/* ====================
+    RESPONSIVE — DESKTOP
+======================= */
+
+@media screen and (min-width: 992px) {
   #intro {
-    background: linear-gradient(255deg, rgba(25,25,25,0) 50%, var(--background-color) 70%);
     padding: 8rem;
+  }
+
+  .intro-gradient {
+    background: linear-gradient(
+      to right,
+      var(--light-background) 30%,
+      transparent 70%
+    );
   }
 }
 
+/* ====================
+    RESPONSIVE — MOBILE/TABLET
+======================= */
+
 @media screen and (max-width: 991px) {
   #intro {
-    background: linear-gradient(180deg, rgba(25,25,25,0) 0%, var(--background-color) 95%);
-    text-align: center;
+    justify-content: center;
     padding: 2rem;
+    clip-path: polygon(16px 0, 100% 0, 100% calc(100% - 16px), calc(100% - 16px) 100%, 0 100%, 0 16px);
+  }
 
-    a.view-portfolio { 
-      margin: 0 auto;
-    }
+  .intro-gradient {
+    background: linear-gradient(
+      to top,
+      var(--light-background) 30%,
+      transparent 70%
+    );
+  }
+
+  #introText {
+    text-align: center;
+  }
+
+  #introText a.view-portfolio {
+    margin: 0 auto;
   }
 }

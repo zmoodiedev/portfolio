@@ -3,20 +3,32 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
-import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import './Contact.css';
 
-const Contact =() => {
+const Contact = () => {
     return (
-        <>     
-            <h2>Contact Me</h2>
-            <p>I am always looking for new opportunities.<br />Whether it's a new collaboration or just to say hi, I'll try my best to respond.</p>
-            <ul className="contact-list">
-                <li className="contact-method email"><a href="mailto:zach.moodie@gmail.com" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faEnvelope} aria-hidden="true" /><span className="sr-only">Email</span></a></li>
-                <li className="contact-method github"><a href="https://github.com/zmoodiedev" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faGithub} aria-hidden="true" /><span className="sr-only">GitHub</span></a></li>
-            </ul>
-        </>
-    )
+        <div className="contact-wrap">
+            <div className="contact-text">
+                <h2>Contact Me</h2>
+                <p>I am always looking for new opportunities.<br />Whether it&apos;s a new collaboration or just to say hi, I&apos;ll try my best to respond.</p>
+            </div>
+            <div className="contact-links">
+                <a href="mailto:dev@zachmoodie.com" className="contact-item">
+                    <FontAwesomeIcon icon={faEnvelope} />
+                    <span>dev@zachmoodie.com</span>
+                </a>
+                <a href="https://github.com/zmoodiedev" target="_blank" rel="noreferrer" className="contact-item">
+                    <FontAwesomeIcon icon={faGithub} />
+                    <span>github.com/zmoodiedev</span>
+                </a>
+                <a href="https://linkedin.com/in/zachmoodie" target="_blank" rel="noreferrer" className="contact-item">
+                    <FontAwesomeIcon icon={faLinkedin} />
+                    <span>linkedin.com/in/zachmoodie</span>
+                </a>
+            </div>
+        </div>
+    );
 };
 
 export default Contact;

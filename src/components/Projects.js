@@ -33,8 +33,8 @@ const Projects = () => {
                         aria-label={`View ${project.name} project`}
                     >
                         <div className="project-scanlines" />
-                        <div className="project-corner project-corner--tl" />
-                        <div className="project-corner project-corner--br" />
+                        <div className="project-corner project-corner--tr" />
+                        <div className="project-corner project-corner--bl" />
 
                         <div className="project-image-panel">
                             <Image
