@@ -3,7 +3,7 @@ import { Open_Sans } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
 
-const GA_ID = "G-GV5G33704V";
+const GA_ID = "G-MXJF4Y2JQ6";
 
 const openSans = Open_Sans({
   subsets: ["latin"],
